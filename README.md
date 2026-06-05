@@ -1,2 +1,1 @@
 # TikaSumaq
-# TikaSumaq
