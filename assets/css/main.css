@@ -4399,3 +4399,87 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
+
+
+			.accordion {
+			    text-align: left;
+			    cursor: pointer;
+				 margin-bottom: 10px;
+			}
+
+			.panel {
+			    max-height: 0;
+			    overflow: hidden;
+			    transition: max-height 0.3s ease;
+			}
+
+
+			.product-layout {
+			    display: flex;
+			    gap: 4rem;
+			    align-items: flex-start;
+			}
+
+			.product-gallery {
+			    flex: 1;
+			}
+
+			.product-info {
+			    flex: 1;
+			}
+
+			.product-gallery #main-image {
+			    width: 100%;
+			    border-radius: 6px;
+			    margin-bottom: 1rem;
+			}
+
+			.thumbnails {
+			    display: flex;
+			    gap: 0.75rem;
+			    flex-wrap: wrap;
+			}
+
+			.thumbnails img {
+			    width: 90px;
+			    cursor: pointer;
+			    border-radius: 4px;
+			}
+
+			.accordion {
+			    width: 100%;
+			    text-align: left;
+			    margin-bottom: 0.5rem;
+			}
+
+			.panel {
+			    max-height: 0;
+			    overflow: hidden;
+			    transition: max-height 0.3s ease;
+			    margin-bottom: 1rem;
+			}
+
+			/* Mobile */
+			@media screen and (max-width: 980px) {
+
+			    .product-layout {
+			        flex-direction: column;
+			    }
+
+			    .product-gallery,
+			    .product-info {
+			        width: 100%;
+			    }
+			}
+
+
+			.thumbnails img {
+			    width: 90px;
+			    cursor: pointer;
+			    border-radius: 4px;
+			    transition: all 0.3s ease;
+			}
+
+			.thumbnails img.active {
+			    transform: scale(1.15);
+			}
