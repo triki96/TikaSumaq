@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					 <h1><a href="index.html">Tika Sumaq</a></h1>
+					 <nav id="nav">
+						 <ul>
+							 <li class="special">
+								 <a href="#menu" class="menuToggle"><span>Menu</span></a>
+								 <div id="menu">
+									 <ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="../productos.html">Productos</a></li>
+										<li><a href="../index.html#about">About</a></li>
+										<li><a href="../index.html#contactos">Contactos</a></li>
+									 </ul>
+								 </div>
+							 </li>
+						 </ul>
+					 </nav>
+				</header>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style5">
+							<div class="inner">
+
+				<section id="product" class="wrapper style5">
+			    <div class="inner">
+
+			        <div class="product-layout">
+
+			            <!-- Galleria -->
+			            <div class="product-gallery">
+
+			                <img id="main-image"
+			                     src="../assets/images/ropa/polos/navidad-rojo-1.jpg"
+			                     alt="Polo Navidad Rojo Tika Sumaq">
+
+								 <div class="thumbnails">
+								    <img class="active" src="../assets/images/ropa/polos/navidad-rojo-1.jpg"
+									 alt="Polo Navidad Rojo Tika Sumaq">
+								    <img src="../assets/images/ropa/polos/navidad-rojo-2.jpg"
+									 alt="Polo Navidad Rojo Tika Sumaq">
+								    <img src="../assets/images/ropa/polos/navidad-rojo-3.jpg" alt="Polo Navidad Rojo Tika Sumaq">
+								</div>
+
+			            </div>
+
+			            <!-- Informazioni -->
+			            <div class="product-info">
+
+			                <h2>Polo Navidad Rojo</h2>
+
+			                <h3>S/. 40.00</h3>
+
+			                <p>
+			                    Polo rojo de algodón con estampado navideño de figuras
+			                    tipo sello postal (Santa, reno, muñeco de nieve y más).
+			                </p>
+
+			                <label for="talla">Talla</label>
+
+			                <select id="talla">
+			                    <option>S</option>
+			                    <option>M</option>
+			                    <option>L</option>
+			                    <option>XL</option>
+			                </select>
+
+			                <br><br>
+
+								 <a id="buy-button" class="button primary">
+								    Comprar por WhatsApp
+								</a>
+
+			            </div>
+
+			        </div>
+
+			    </div>
+				</section>
+
+								<section>
+									<button class="accordion">Talla y ajuste</button>
+									<div class="panel">
+									    <p>blabla...</p>
+									</div>
+									<button class="accordion">Descripción</button>
+									<div class="panel">
+									    <p>blabla...</p>
+									</div>
+									<button class="accordion">Detalles</button>
+									<div class="panel">
+									    <p>blabla...</p>
+									</div>
+									<button class="accordion">Cuidado</button>
+									<div class="panel">
+									    <p>blabla...</p>
+									</div>
+								</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				document.querySelectorAll('.accordion').forEach(button => {
+				    button.addEventListener('click', () => {
+				        const panel = button.nextElementSibling;
+
+				        if (panel.style.maxHeight) {
+				            panel.style.maxHeight = null;
+				        } else {
+				            panel.style.maxHeight = panel.scrollHeight + "px";
+				        }
+				    });
+				});
+
+				const mainImage = document.getElementById("main-image");
+
+				document.querySelectorAll(".thumbnails img").forEach(img => {
+
+				    img.addEventListener("click", () => {
+
+				        mainImage.src = img.src;
+
+				        document.querySelectorAll(".thumbnails img")
+				            .forEach(i => i.classList.remove("active"));
+
+				        img.classList.add("active");
+				    });
+
+				});
+
+
+					const button = document.getElementById("buy-button");
+
+					button.addEventListener("click", function() {
+
+					    const talla = document.getElementById("talla").value;
+
+					    const mensaje =
+					        `Hola, quiero comprar el Polo Navidad Rojo Tika Sumak.\n` +
+					        `Talla: ${talla}`;
+
+					    const url =
+					        `https://wa.me/51999999999?text=${encodeURIComponent(mensaje)}`;
+
+					    window.open(url, "_blank");
+					});
+
+			</script>
+	</body>
+</html>
